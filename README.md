@@ -1,2 +1,2 @@
 
-this repository is a work in progress, it's currently imported from my drive (which is why the DI guide is a docx), but will soon be migrated into a format that will show onthe browser.
+this repository is a work in progress, currently done with the DI presentation (pptx), next is the .md 
