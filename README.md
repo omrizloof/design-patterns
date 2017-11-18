@@ -45,12 +45,12 @@ Class dependencies are inserted into the class using the constructor arguments.
 *example:*
 ```
 class Car {
-  		constructor(engine, tires, doors)  {
-  		  this.engine = engine;
-  		  this.tires = tires;
-  		  this.doors = doors;
-  		}
-	}
+  	constructor(engine, tires, doors)  {
+		this.engine = engine;
+		this.tires = tires;
+		this.doors = doors;
+  	}
+}
 ```
 #### Setter injection
 Class dependencies are inserted using setter functions.
@@ -58,24 +58,24 @@ Class dependencies are inserted using setter functions.
 *example:*
 ```
 class Car {
-		private Engine mEngine;
-		private Tire mTires;
-		private Door[] mDoors;
-
-		constructor()  {}
-
-		set mEngine(engine) {
-			this.mEngine = engine;
-		}
-		
-		set mTires(tires) {
-			this.mTires = tires;
-		}
-		
-		set mDoors(doors) {
-			this.mDoors = doors;
-		}
+	private Engine mEngine;
+	private Tire mTires;
+	private Door[] mDoors;
+	
+	constructor()  {}
+	
+	set mEngine(engine) {
+		this.mEngine = engine;
 	}
+		
+	set mTires(tires) {
+		this.mTires = tires;
+	}
+		
+	set mDoors(doors) {
+		this.mDoors = doors;
+	}
+}
 ```
 #### Interface injection
 Class dependencies are inserted using an interface that explicitly defines the point where a dependency can be set.
@@ -83,51 +83,51 @@ Class dependencies are inserted using an interface that explicitly defines the p
 *example:*
 ```
 public interface InjectedEngine {
-		public void injectEngine(engine);
+	public void injectEngine(engine);
 }
 
 public interface InjectedTires {
-		public void injectTires(tires);
+	public void injectTires(tires);
 }
 
 public interface InjectedDoors {
-		public void injectDoors(doors);
+	public void injectDoors(doors);
 }
 
 class Car  implements InjectedEngine, InjectedTires, InjectedDoors {
-		private Engine mEngine;
-		private Tire mTires;
-		private Door[] mDoors;
+	private Engine mEngine;
+	private Tire mTires;
+	private Door[] mDoors;
 
-		constructor()  {}
+	constructor()  {}
 
-		@Override
-		public void injectEngine(engine) {
-			this.mEngine = engine;
-		}
-
-		@Override
-		public void injectTires(tires) {
-			this.mTires = tires;
-		}
-
-		@Override
-		public void injectDoors(doors) {
-			this.mDoors = doors;
-		}
+	@Override
+	public void injectEngine(engine) {
+		this.mEngine = engine;
 	}
+
+	@Override
+	public void injectTires(tires) {
+		this.mTires = tires;
+	}
+
+	@Override
+	public void injectDoors(doors) {
+		this.mDoors = doors;
+	}
+}
 ```
 
 ### Case study 2: constructor DI
 Consider the following code:
 ```
 class Car {
-  		constructor(engine, tires, doors)  {
-  		  this.engine = engine;
-  		  this.tires = tires;
-  		  this.doors = doors;
-  		}
-	}
+	constructor(engine, tires, doors)  {
+		this.engine = engine;
+		this.tires = tires;
+		this.doors = doors;
+  	}
+}
 ```
 In this case study, we moved the dependency creation out of the constructor, and changed the constructor function to expect all needed dependencies as arguments. The code no longer contains concrete implementations, as we moved the responsibility of creating those dependencies to a higher level.
 
