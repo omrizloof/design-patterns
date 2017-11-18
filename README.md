@@ -1,9 +1,9 @@
 # Dependency injection
  [TOC]
 ### Document subjects
--What is a dependency, and how it affects us as programmers
--What is dependency injection, and the three form of the DI (dependency injection) design pattern
--What are DI frameworks
+- What is a dependency, and how it affects us as programmers
+- What is dependency injection, and the three form of the DI (dependency injection) design pattern
+- What are DI frameworks
 
 ### Intro - what is a dependency
 **A dependency is when one object uses the API of another object**
