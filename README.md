@@ -1,5 +1,5 @@
 # Dependency injection
-  [ TOC ]
+  [TOC]
 ### Document subjects
 - What is a dependency, and how it affects us as programmers
 - What is dependency injection, and the three form of the DI (dependency injection) design pattern
