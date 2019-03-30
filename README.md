@@ -139,12 +139,12 @@ After making the dependencies constructor arguments instead of obects created in
 
 #### Case study 2: issues
 In this case study, the responsibility of creating and managing the constructor dependencies is moved to a higher level - whomever creates a car will be forced to supply its dependencies.
-**Who takes care of assembling all those dependencies? We do.**
+**Who takes care of assembling all those dependencies? It's us.**
 #### Case study 2: conclusions
 Moving the dependencies to be  injected into the constructor using the constructor arguments improved code testablity and reusability, but we still have to provide the class dependencies ourselves.
 ### DI frameworks
 
-Using DI frameworks allows us the flexibility of our code gained for using DI, without the trouble of creating and initializing class dependencies ourselves.
+Using DI frameworks provides us the flexibility of the DI pattern, and saves us the trouble of creating and initializing class dependencies ourselves.
 
 *DI frameworks analyze the dependencies of a class. 
 
